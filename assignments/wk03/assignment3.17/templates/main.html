@@ -1,0 +1,19 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrams</title>
+</head>
+
+<body>
+    {% if exist == True %}
+    <h3>{{word}} exists!</h3>
+    {% for w in anagrams %}
+    <ul>{{w}}</ul>
+    {% endfor %} {% else %}
+    <h3>{{word}} does not exist!</h3>
+    {% endif %}
+</body>
+
+</html>

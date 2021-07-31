@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+
+<body>
+    {% if is_word %}
+    <h1>The word {{prefix}} exits!!</h1>
+    {% else %}
+    <h1>{{prefix}} is not a word.</h1>
+    {% endif %} {% if word_count != 0 %}
+    <ul>
+        {% for prefixes in alphabets %}
+        <li>
+            <a href="{{ url_for('anagram', prefix=prefixes) }}">{{prefixes}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% else %} {% endif %}
+
+    <h4><a href="{{url_for('home')}}">Return Home</a></h4>
+</body>
+
+</html>
